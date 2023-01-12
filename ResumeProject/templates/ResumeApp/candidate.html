@@ -1,0 +1,36 @@
+{% extends 'ResumeApp/base.html' %}
+
+{% block css %}
+{% endblock css %}
+
+{% block js %}
+{% endblock js%}
+
+{% block title %}
+<title> Candidates page </title>
+{% endblock title %}
+
+{% block body %}
+<div class="container text-center shadow rounded p-2 my-3 bg-primary"><h1> Candidate information</h1></div>
+    <div class="container shadow w-75 my-5 p-5 rounded bg-primary">
+        <div class="container bg-warning">
+            <img src="{{data.Prof_image.url}}" alt="" height="200">
+        </div>
+        <div class="container my-3 p-2 text-dark text-lg-start shadow bg-info">
+            <p class="fw-bold">First Name :- {{data.FirstName}}</p>
+            <p class="fw-bold">Last Name:- {{data.LastName}}</p>
+            <p class="fw-bold">Email :- {{data.Email}}</p>
+            <p class="fw-bold">Contact No :- {{data.ContactNo}}</p>
+            <p class="fw-bold">Gender :- {{data.Gender}}</p>
+            <p class="fw-bold">Date Of Birth :- {{data.DOB}}</p>
+            <p class="fw-bold">City :- {{data.City}}</p>
+            <p class="fw-bold">State :- {{data.State}}</p>
+            <p class="fw-bold">Language Known :- {{data.Language}}</p>
+            <p class="fw-bold">Prgramming Language :- {{data.Programming_Language}}</p>
+            <p class="fw-bold">Education :- {{data.Education}}</p>
+            <p class="fw-bold">Location prefered :- {{data.Prefered_loc}}</p>
+            <p class="fw-bold">Project Done :- {{data.Project}}</p>
+        </div>
+    </div>
+    
+{% endblock body %}

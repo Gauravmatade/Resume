@@ -1,0 +1,22 @@
+{% extends 'ResumeApp/base.html' %}
+
+{% block css %}
+{% endblock css %}
+
+{% block js %}
+{% endblock js%}
+
+{% block title %}
+<title>All Candidates page </title>
+{% endblock title %}
+
+{% block body %}
+
+    {% for d in data %}
+        <div class="container p-3 my-3 shadow rounded">
+                <img src="{{d.Prof_image.url}}" alt="" height="150px">
+            <a href="{% url 'candidate' d.id %}">{{d.Email}}</a>
+        </div>
+    {% endfor %}
+
+{% endblock body %}
